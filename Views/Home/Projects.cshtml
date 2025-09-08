@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<section class="projects-container fade-in">
+    <h1>My Projects</h1>
+    <p>Here are some of the things I've built, designed, or collaborated on.</p>
+
+    <!-- Filter Tags -->
+    <div class="filter-tags">
+        <button class="tag active" onclick="filterProjects('all')">All</button>
+        <button class="tag" onclick="filterProjects('web')">Web</button>
+        <button class="tag" onclick="filterProjects('game')">Game</button>
+        <button class="tag" onclick="filterProjects('ai')">AI</button>
+        <button class="tag" onclick="filterProjects('excel')">Data & Excel Automation</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="project-grid">
+        <div class="project-card" data-category="web">
+            <h3>Portfolio Website</h3>
+            <p>My personal site showcasing my skills and work.</p>
+            <a href="https://github.com/yourusername/portfolio" target="_blank">View Code →</a>
+        </div>
+
+        <div class="project-card" data-category="game">
+            <h3>Unity Horror Game</h3>
+            <p>A short horror survival game built with Unity and C#.</p>
+            <a href="https://example.com/horror-game" target="_blank">Play Demo →</a>
+        </div>
+
+        <div class="project-card" data-category="ai">
+            <h3>AI Chatbot</h3>
+            <p>Conversational assistant using Python and GPT API.</p>
+            <a href="https://github.com/yourusername/chatbot" target="_blank">View Code →</a>
+        </div>
+
+        <div class="project-card" data-category="excel">
+            <h3>IPPT Color Categorization Tracker</h3>
+            <p>Automated Excel tool that assigns color-coded performance results for trainees based on age and test scores.</p>
+            <a href="https://docs.google.com/spreadsheets/d/1Pli0n612tFTdwcMLPf3Z9Q-ff0P6dma08193ar3PDxQ/edit?usp=sharing" target="_blank">View Project →</a>
+        </div>
+
+        <div class="project-card" data-category="excel">
+            <h3>Pull-Up Performance Tracker</h3>
+            <p>Dynamic spreadsheet that records, monitors, and ranks trainees’ pull-up reps for IPPT readiness.</p>
+            <a href="https://docs.google.com/spreadsheets/d/1sGxiA81WS8z8dJfEIVq_ScVJRQCit4oVvwnu487kkMI/edit?usp=sharing" target="_blank">View Project →</a>
+        </div>
+    </div>
+</section>

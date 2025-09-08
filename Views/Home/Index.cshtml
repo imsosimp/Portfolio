@@ -1,0 +1,155 @@
+﻿@{
+    ViewData["Title"] = "My Portfolio";
+}
+
+<section class="hero">
+    <div class="intro">
+        <h1 class="fade-in">Hi, I'm Ivan Ng 👋</h1>
+        <p class="fade-in delay-1">Software Developer | Tech Enthusiast | Artist<br/><br/>Hi, I am Ivan Ng from Malaysia. 
+        I pursued my studies at Nanyang Polytechnic, where I initially delved into pharmaceutical engineering. However, 
+        my journey of self-discovery led me to a newfound love for programming. Following my passion, I made the decision 
+        to switch my academic focus and graduated with a diploma in information technology. Embarking on the path of studying 
+        abroad has been a challenging yet rewarding experience. To support myself financially, I had taken on the role of a 
+        part-time waiter during the weekends, honing my skills in communication and team leadership along the way. In my earlier 
+        days, I was deeply immersed in the world of sports, particularly excelling in both swimming and running. However, 
+        as life took its course, I found a new passion and transformed into a freelance part-time artist but I am still actively 
+        swimming and running. I am currently serving National Service in SPF as a Field Instructor, training the next generation 
+        of police officers, conducting physical training, teaching drills, and instilling discipline. My diverse background in 
+        sports, arts, and technology has shaped me into a well-rounded individual, and I am excited about the endless possibilities 
+        that the future holds. Looking ahead, I aspire to merge my artistic flair with my technical skills to create innovative and 
+        meaningful contributions in the field of information technology.</p>
+    </div>
+</section>
+<br/>
+
+@* <section class="projects fade-in delay-2">
+    <h2>My Projects</h2>
+    <div class="project-grid">        
+        <a href="https://github.com/yourusername/portfolio" 
+        target="_blank" class="project-card">
+            <div>
+                <h3>Project One</h3>
+                <p>Description</p>
+            </div>
+        </a>
+        <a href="https://github.com/yourusername/portfolio" 
+        target="_blank" class="project-card">
+            <div>
+                <h3>Project Two</h3>
+                <p>Description</p>
+            </div>
+        </a>
+        <a href="https://github.com/yourusername/portfolio" 
+        target="_blank" class="project-card">
+            <div>
+                <h3>Project Three</h3>
+                <p>Description</p>
+            </div>
+        </a>
+        <a href="https://github.com/yourusername/portfolio" 
+        target="_blank" class="project-card">
+            <div>
+                <h3>Project Four</h3>
+                <p>Description</p>
+            </div>
+        </a>
+    </div>
+</section> *@
+
+<section class="projects">
+  <h2>My Projects</h2>
+  <div class="project-grid">
+    <div
+        class="project-card"
+        data-title="Project One"
+        data-content="
+        Lorem ipsum dolor sit amet. Ex deleniti mollitia sed dicta quia vel perspiciatis 
+        quibusdam 33 numquam iure non consequuntur placeat. Quo cupiditate quasi ut 
+        architecto quod et odio dicta est nesciunt enim et dolore illo ut voluptatem omnis 
+        aut tempore ipsam! Aut voluptatum suscipit ea dolorem distinctio quo Quis quaerat.
+        Qui illo error quo laudantium cumque qui ipsam quos vel accusamus architecto eos 
+        molestias neque cum totam quam id delectus nisi. In accusantium laboriosam est 
+        oluptatibus sunt et facilis magnam est commodi reiciendis sed corporis nulla qui 
+        reiciendis maxime. Quo internos omnis aut tenetur dolor in corrupti consequatur et 
+        galisum assumenda et harum iure eos Quis veritatis. Eos quisquam quidem ab sequi nobis 
+        est recusandae reiciendis!"
+        data-link="https://github.com"
+    onclick="expandCard(this)">
+      <h3>Project One</h3>
+      <p>Short summary</p>
+    </div>
+    <div
+        class="project-card"
+        data-title="Project Two"
+        data-content="
+        Lorem ipsum dolor sit amet. Ex deleniti mollitia sed dicta quia vel perspiciatis 
+        quibusdam 33 numquam iure non consequuntur placeat. Quo cupiditate quasi ut 
+        architecto quod et odio dicta est nesciunt enim et dolore illo ut voluptatem omnis 
+        aut tempore ipsam! Aut voluptatum suscipit ea dolorem distinctio quo Quis quaerat.
+        Qui illo error quo laudantium cumque qui ipsam quos vel accusamus architecto eos 
+        molestias neque cum totam quam id delectus nisi. In accusantium laboriosam est 
+        oluptatibus sunt et facilis magnam est commodi reiciendis sed corporis nulla qui 
+        reiciendis maxime. Quo internos omnis aut tenetur dolor in corrupti consequatur et 
+        galisum assumenda et harum iure eos Quis veritatis. Eos quisquam quidem ab sequi nobis 
+        est recusandae reiciendis!"
+        data-link="https://github.com"
+    onclick="expandCard(this)">
+    <h3>Project Two</h3>
+      <p>Short summary</p>
+    </div>
+    <div
+        class="project-card"
+        data-title="Project Three"
+        data-content="
+        Lorem ipsum dolor sit amet. Ex deleniti mollitia sed dicta quia vel perspiciatis 
+        quibusdam 33 numquam iure non consequuntur placeat. Quo cupiditate quasi ut 
+        architecto quod et odio dicta est nesciunt enim et dolore illo ut voluptatem omnis 
+        aut tempore ipsam! Aut voluptatum suscipit ea dolorem distinctio quo Quis quaerat.
+        Qui illo error quo laudantium cumque qui ipsam quos vel accusamus architecto eos 
+        molestias neque cum totam quam id delectus nisi. In accusantium laboriosam est 
+        oluptatibus sunt et facilis magnam est commodi reiciendis sed corporis nulla qui 
+        reiciendis maxime. Quo internos omnis aut tenetur dolor in corrupti consequatur et 
+        galisum assumenda et harum iure eos Quis veritatis. Eos quisquam quidem ab sequi nobis 
+        est recusandae reiciendis!"
+        data-link="https://github.com"
+    onclick="expandCard(this)">
+      <h3>Project Three</h3>
+      <p>Short summary</p>
+    </div>
+  </div>
+</section>
+
+<!-- Overlay for expanded card -->
+<div class="overlay" id="overlay">
+  <div class="expanded-card" id="expandedCard">
+    <button class="close-btn" onclick="closeCard()">✖</button>
+    <h3 id="expandedTitle"></h3>
+    <p id="expandedContent"></p>
+    <a id="viewMoreBtn" href="https://github.com" target="_blank" class="view-more-btn">View More →</a>
+  </div>
+</div>
+
+<script>
+  function expandCard(title, content) {
+    document.getElementById("expandedTitle").textContent = title;
+    document.getElementById("expandedContent").textContent = content;
+    document.getElementById("overlay").style.display = "flex";
+  }
+
+  function closeCard() {
+    document.getElementById("overlay").style.display = "none";
+  }
+
+  function expandCard(element) {
+  const title = element.dataset.title;
+  const content = element.dataset.content.trim().replace(/\n\s+/g, '\n');
+
+  document.getElementById("expandedTitle").textContent = title;
+  document.getElementById("expandedContent").textContent = content;
+  document.getElementById("overlay").style.display = "flex";
+
+  const viewMoreBtn = document.getElementById("viewMoreBtn");
+  const viewLink = element.dataset.link || "#"; // default to "#"
+  viewMoreBtn.href = viewLink;
+}
+</script>
